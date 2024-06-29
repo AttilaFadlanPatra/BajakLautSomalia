@@ -2,76 +2,104 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/flags_page"
+    android:id="@+id/report_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".FlagsFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+    <FrameLayout
+        android:id="@+id/framelayoutflags"
         android:layout_width="409dp"
-        android:layout_height="143dp"
+        android:layout_height="649dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <include
-            layout="@layout/pengawasan_card_top"
-            android:visibility="visible" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <ScrollView
+            <ScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="419dp"
+                android:layout_height="0dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mm">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/flags_card" />
+
+                    <include
+                        layout="@layout/flags_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <include
+                        layout="@layout/flags_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <include
+                        layout="@layout/flags_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <include
+                        layout="@layout/flags_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <include
+                        layout="@layout/flags_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <include
+                        layout="@layout/flags_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <include
+                        layout="@layout/flags_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </ScrollView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mm"
+                android:layout_width="match_parent"
+                android:layout_height="143dp"
+                android:background="@drawable/bluesea"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
-        android:layout_height="589dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <include layout="@layout/flags_card" />
-
-            <include
-                layout="@layout/flags_card"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <include
-                layout="@layout/flags_card"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <include
-                layout="@layout/flags_card"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <include
-                layout="@layout/flags_card"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <include
-                layout="@layout/flags_card"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <include
-                layout="@layout/flags_card"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <include
-                layout="@layout/flags_card"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </LinearLayout>
-    </ScrollView>
+        app:menu="@menu/bottom_nav_menu" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

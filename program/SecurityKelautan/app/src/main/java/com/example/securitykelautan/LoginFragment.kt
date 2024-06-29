@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -14,11 +15,11 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [RegisterFragment.newInstance] factory method to
+ * Use the [LoginFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class RegisterFragment : Fragment() {
-    // TODO: Rename and change types ozf parameters
+class LoginFragment : Fragment() {
+    // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
 
@@ -35,13 +36,17 @@ class RegisterFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_register, container, false)
+        val view = inflater.inflate(R.layout.fragment_login, container, false)
 
-        val btnLogin : Button = view.findViewById(R.id.buttonSignUp)
+        val btnLogin : Button = view.findViewById(R.id.buttonLoginn)
         btnLogin.setOnClickListener{
-            requireActivity().supportFragmentManager.beginTransaction().replace(R.id.register_page, FlagsFragment()).addToBackStack(null).commit()
+            requireActivity().supportFragmentManager.beginTransaction().replace(R.id.login_page, FlagsFragment()).addToBackStack(null).commit()
         }
 
+        val txtSignUp : TextView = view.findViewById(R.id.txtSignUpoo)
+        txtSignUp.setOnClickListener{
+            requireActivity().supportFragmentManager.beginTransaction().replace(R.id.login_page, RegisterFragment()).addToBackStack(null).commit()
+        }
         return view
     }
 
@@ -52,12 +57,12 @@ class RegisterFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment RegisterFragment.
+         * @return A new instance of fragment loginFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            RegisterFragment().apply {
+            LoginFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
