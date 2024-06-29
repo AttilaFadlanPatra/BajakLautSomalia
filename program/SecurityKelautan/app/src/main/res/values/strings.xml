@@ -2,4 +2,8 @@
     <string name="app_name">SecurityKelautan</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pengawasan_icon">pengawasan icon</string>
+    <string name="observe">Observe</string>
+    <string name="report">report</string>
+    <string name="profile">profile</string>
 </resources>

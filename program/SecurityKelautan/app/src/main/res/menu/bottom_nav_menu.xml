@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/pengawasan_icon"
+        android:icon="@drawable/flag_circle_icon"
+        android:title="@string/observe"/>
+    <item android:id="@+id/report_icon"
+        android:icon="@drawable/report_icon"
+        android:title="@string/report"/>
+    <item android:id="@+id/profile_icon"
+        android:icon="@drawable/account_box_icon"
+        android:title="@string/profile"/>
+</menu>
